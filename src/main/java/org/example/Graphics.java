@@ -273,7 +273,7 @@ public class Graphics extends JPanel implements ActionListener {
     private Color randomColor() {
 
             Random random = new Random();
-            return new Color(random.nextInt(50,255), random.nextInt(50,255), random.nextInt(50,255));
+            return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
 
     }
 

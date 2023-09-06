@@ -16,6 +16,8 @@ public class SnakeGame extends JFrame {
     private JRadioButton HARDRadioButton;
     private JRadioButton wallCollision;
     private JPanel wallPanel;
+    private JLabel lbHighest;
+    int highestScore;
 
     int speed;
 
@@ -50,11 +52,20 @@ public class SnakeGame extends JFrame {
         while (true) {
 
             lbScore.setText("SCORE: " + String.valueOf(pnlGraphic.getFoodEaten()));
+            lbHighest.setText("HIGHEST SCORE: " + String.valueOf(highestScore(pnlGraphic.getFoodEaten())));
             this.setVisible(true);
         }
 
     }
 
+    private int highestScore (int score) {
+        if (score > highestScore){
+            highestScore = score;
+            return highestScore;
+        } else {
+            return highestScore;
+        }
+    }
     private void setSpeed() {
 
         EASYRadioButton.addActionListener(new ActionListener() {
